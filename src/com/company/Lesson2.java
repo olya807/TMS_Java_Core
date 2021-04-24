@@ -23,6 +23,20 @@ public class Lesson2 {
         //22222=101011011001110
     }
 
+    public void Task2(){
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter four-digit number: ");
+
+        char[] data = String.valueOf(input.next()).toCharArray();
+
+        if (data[0] != data[1] && data[1] != data[2] && data[2] != data[3] && data[0] != data[2] && data[0] != data[3] && data[1] != data[3]) {
+            System.out.println("All digits are different");
+        } else {
+            System.out.println("Not all digits are different");
+        }
+    }
+
     public void Task3() {
 
         Scanner input = new Scanner(System.in);
