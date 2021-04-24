@@ -52,6 +52,25 @@ public class Lesson2 {
         }
     }
 
+    public void Task4() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter value 'a': ");
+        int a = input.nextInt();
+
+        System.out.println("Enter value 'b': ");
+        int b = input.nextInt();
+
+        System.out.println("Enter value 'c': ");
+        int c = input.nextInt();
+
+        if (a + b > c && a + c > b && c + b > a) {
+            System.out.println("The triangle is real");
+        } else {
+            System.out.println("The triangle is not real");
+        }
+    }
+
     public void Task5() {
 
         Scanner input = new Scanner(System.in);
@@ -59,13 +78,11 @@ public class Lesson2 {
 
         int number = input.nextInt();
 
-        if(number > 0){
+        if (number > 0) {
             System.out.println(number + 1);
-        }
-        else if(number < 0){
+        } else if (number < 0) {
             System.out.println(number - 2);
-        }
-        else{
+        } else {
             System.out.println(10);
         }
     }
