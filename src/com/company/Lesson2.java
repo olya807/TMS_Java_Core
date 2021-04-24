@@ -24,6 +24,7 @@ public class Lesson2 {
     }
 
     public void Task3() {
+
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number: ");
 
@@ -48,6 +49,24 @@ public class Lesson2 {
             System.out.println("The number is even");
         } else {
             System.out.println("The number is not even");
+        }
+    }
+
+    public void Task5() {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+
+        int number = input.nextInt();
+
+        if(number > 0){
+            System.out.println(number + 1);
+        }
+        else if(number < 0){
+            System.out.println(number - 2);
+        }
+        else{
+            System.out.println(10);
         }
     }
 
