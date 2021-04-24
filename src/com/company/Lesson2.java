@@ -23,6 +23,34 @@ public class Lesson2 {
         //22222=101011011001110
     }
 
+    public void Task3() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+
+        int number = input.nextInt();
+
+        char[] data = String.valueOf(number).toCharArray();
+        int arrayLength = data.length;
+
+        if (arrayLength == 3) {
+            System.out.println("The number is three-digit");
+        } else {
+            System.out.println("The number is not three-digit");
+        }
+
+        if (data[arrayLength - 1] == '7') {
+            System.out.println("The last number is 7");
+        } else {
+            System.out.println("The last number is not 7");
+        }
+
+        if (number % 2 == 0) {
+            System.out.println("The number is even");
+        } else {
+            System.out.println("The number is not even");
+        }
+    }
+
     public void Task6() {
 
         String result = "The biggest number is: ";
