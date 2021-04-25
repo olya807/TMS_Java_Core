@@ -127,4 +127,25 @@ public class Lesson2 {
             System.out.println("Number " + a + " is equal to number " + b);
         }
     }
+
+    public void Task7(){
+
+        String devNumber;
+        String devWord = " программист";
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter devs number: ");
+
+        devNumber = input.next();
+
+        int lastDigit = Integer.parseInt(String.valueOf(devNumber.charAt(devNumber.length() - 1)));
+
+        if (lastDigit == 1) {
+            System.out.println(devNumber + devWord);
+        } else if (lastDigit == 2 || lastDigit == 3 || lastDigit == 4) {
+            System.out.println(devNumber + devWord + "а");
+        } else {
+            System.out.println(devNumber + devWord + "ов");
+        }
+    }
 }
