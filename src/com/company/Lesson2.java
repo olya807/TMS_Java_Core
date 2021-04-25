@@ -28,12 +28,18 @@ public class Lesson2 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter four-digit number: ");
 
-        char[] data = String.valueOf(input.next()).toCharArray();
+        String stringValue = input.next();
 
-        if (data[0] != data[1] && data[1] != data[2] && data[2] != data[3] && data[0] != data[2] && data[0] != data[3] && data[1] != data[3]) {
-            System.out.println("All digits are different");
+        if (stringValue.length() != 4) {
+            System.out.println("The number is not four-digit");
         } else {
-            System.out.println("Not all digits are different");
+            char[] data = stringValue.toCharArray();
+
+            if (data[0] != data[1] && data[1] != data[2] && data[2] != data[3] && data[0] != data[2] && data[0] != data[3] && data[1] != data[3]) {
+                System.out.println("All digits are different");
+            } else {
+                System.out.println("Not all digits are different");
+            }
         }
     }
 
@@ -67,6 +73,7 @@ public class Lesson2 {
     }
 
     public void Task4() {
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter value 'a': ");
