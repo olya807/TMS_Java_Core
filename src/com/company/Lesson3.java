@@ -7,9 +7,9 @@ import java.util.Random;
 public class Lesson3 {
 
     static String newLine = "\r\n";
-    static String skip2Lines = "\r\n\r\n";
+    static String skip2Lines = newLine + newLine;
 
-    public void Task1() {
+    public void task1() {
         int[] evenNumbers = new int[10];
 
         int n = 0;
@@ -27,7 +27,7 @@ public class Lesson3 {
         }
     }
 
-    public void Task2() {
+    public void task2() {
 
         List<Integer> evenNumbers = new ArrayList<>();
 
@@ -51,7 +51,7 @@ public class Lesson3 {
         }
     }
 
-    public void Task3() {
+    public void task3() {
 
         List<Integer> randomNumbers = new ArrayList<>();
         int evenNumbersAmount = 0;
@@ -74,7 +74,7 @@ public class Lesson3 {
         System.out.print("The amount of even numbers is: " + evenNumbersAmount + newLine);
     }
 
-    public void Task4() {
+    public void task4() {
 
         List<Integer> randomNumbers = new ArrayList<>();
 
@@ -98,7 +98,7 @@ public class Lesson3 {
         }
     }
 
-    public void Task5() {
+    public void task5() {
 
         String firstAverageString = "The 1st List Arithmetic Average: ";
         String secondAverageString = "The 2nd List Arithmetic Average: ";
@@ -123,6 +123,30 @@ public class Lesson3 {
         } else {
             System.out.println(skip2Lines + firstAverageString + averageValueFirst + " = " + secondAverageString + averageValueSecond);
         }
+    }
+
+    public void task6() {
+
+    }
+
+    public void task7() {
+
+        List<Integer> randomNumbers = new ArrayList<>();
+
+        //generate random values from 0-15
+        CreateRandomNumbersList(randomNumbers, 11, 16);
+
+        PrintListValues(randomNumbers, "The random numbers list: ");
+
+        int elementMaxValueIndex = 0;
+
+        for (int index = 1; index < randomNumbers.size() - 1; index++) {
+            if (randomNumbers.get(elementMaxValueIndex) <= randomNumbers.get(index)) {
+                elementMaxValueIndex = index;
+            }
+        }
+
+        System.out.printf("\r\nIndex of the max element %s is %s", randomNumbers.get(elementMaxValueIndex), elementMaxValueIndex);
     }
 
     private static void CreateRandomNumbersList(List<Integer> listName, int arrayLength, int randomNumbersMaxRange) {
