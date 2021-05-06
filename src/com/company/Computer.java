@@ -33,11 +33,11 @@ public class Computer {
 
     public static void turnOnPc() {
 
-        if(runCycles > resource){
+        if (runCycles > resource) {
             System.out.println(blewUpMessage);
         }
         //if PC blew up then show a message that it's blew up
-        else if(isBlewUp){
+        else if (isBlewUp) {
             System.out.println("\r\n\r\nThe PC blew up. You can't turn it on.");
         }
         //if PC is not blew up and it's not turned on then guess the number and turn it on if you are lucky
@@ -52,11 +52,11 @@ public class Computer {
 
     public static void turnOffPc() {
 
-        if(runCycles > resource){
+        if (runCycles > resource) {
             System.out.println(blewUpMessage);
         }
         //if PC blew up then show a message that it's blew up
-        else if(isBlewUp){
+        else if (isBlewUp) {
             System.out.println("\r\n\r\nThe PC blew up. You can't turn it off.");
         }
         //if PC is not blew up and it's turned on then guess the number and turn it off if you are lucky
