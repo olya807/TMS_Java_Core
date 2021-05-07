@@ -130,6 +130,27 @@ public class Lesson3 {
 
     public static void task6() {
 
+        int[] randomNumbers = new int[4];
+        boolean isAscending = true;
+
+        //generate random values from 0-10
+        CreateRandomNumbersList(randomNumbers, 3, 11);
+
+        PrintListValues(randomNumbers, "The random numbers list: ");
+
+        for (int i = 0; i < randomNumbers.length - 1; i++) {
+            if (randomNumbers[i] >= randomNumbers[i + 1]) {
+                isAscending = false;
+                break;
+            }
+        }
+
+        if (isAscending) {
+            System.out.println("The sequence is strictly ascending.");
+        } else {
+            System.out.println("The sequence is not strictly ascending.");
+        }
+
     }
 
     public static void task7() {
@@ -166,6 +187,8 @@ public class Lesson3 {
         for (int randomNumber : listName) {
             System.out.print(randomNumber + " ");
         }
+
+        System.out.println(skip2Lines);
     }
 
     private static int CalculateArithmeticAverage(int[] listName) {
