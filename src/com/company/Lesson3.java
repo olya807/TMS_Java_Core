@@ -1,9 +1,7 @@
 package com.company;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Lesson3 {
 
@@ -171,6 +169,77 @@ public class Lesson3 {
         }
 
         System.out.printf("\r\nIndex of the max element %s is %s", randomNumbers[elementMaxValueIndex], elementMaxValueIndex);
+    }
+
+    public static void task8() {
+
+        Scanner input = new Scanner(System.in);
+        int arrayLength;
+
+        do {
+            System.out.println("Please enter array length (should be a positive number): ");
+            arrayLength = input.nextInt();
+        } while (arrayLength <= 0);
+
+        int[] array = new int[arrayLength];
+        int firstPart = 0;
+        int secondPart = 0;
+
+        //generate random values from 0-15
+        CreateRandomNumbersList(array, arrayLength - 1, 16);
+
+        PrintListValues(array, "The random numbers list: ");
+
+        for (int i = 0; i < arrayLength / 2; i++)
+            firstPart = firstPart + array[i];
+
+        for (int i = arrayLength - 1; i > arrayLength / 2; i--)
+            secondPart = secondPart + array[i];
+
+        if (firstPart > secondPart) {
+            System.out.printf("The first part '%s' is bigger than the second part '%s'.", firstPart, secondPart);
+        } else if (firstPart < secondPart) {
+            System.out.printf("The first part '%s' is smaller than the second part '%s'.", firstPart, secondPart);
+        } else {
+            System.out.printf("The first '%s' and the second part '%s' are equal.", firstPart, secondPart);
+        }
+    }
+
+    public static void task9() {
+
+        Scanner input = new Scanner(System.in);
+        int n;
+
+        do {
+            System.out.println("Please enter a number bigger than 3: ");
+            n = input.nextInt();
+        } while (n <= 3);
+
+        int[] randomNumbers = new int[n];
+
+        //generate random values from 0-n
+        CreateRandomNumbersList(randomNumbers, randomNumbers.length - 1, n + 1);
+
+        PrintListValues(randomNumbers, "The random numbers list: ");
+
+        int evenNumbersAmount = 0;
+
+        for (int randomNumber : randomNumbers) {
+            if (randomNumber % 2 == 0 && randomNumber > 0) {
+                evenNumbersAmount += 1;
+            }
+        }
+
+        int i = 0;
+        int[] evenNumbersArray = new int[evenNumbersAmount];
+        for (int randomNumber : randomNumbers) {
+            if (randomNumber % 2 == 0 && randomNumber > 0) {
+                evenNumbersArray[i] = randomNumber;
+                i++;
+            }
+        }
+
+        PrintListValues(evenNumbersArray, "The even numbers list: ");
     }
 
     private static void CreateRandomNumbersList(int[] listName, int arrayLength, int randomNumbersMaxRange) {
