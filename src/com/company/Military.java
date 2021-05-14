@@ -2,15 +2,15 @@ package com.company;
 
 public class Military extends Air {
 
-    static boolean isCatapultPresent;
-    static int missileAmount;
+    boolean isCatapultPresent;
+    int missileAmount;
 
-    public static String characteristics(){
+    public String characteristics(){
         return String.format("Is catapult present: %s.\r\nMissile amount is %s.\r\nOutput value is %s kW.",
                 isCatapultPresent, missileAmount, output(horsePower));
     }
 
-    public static void shot(){
+    public void shot(){
         if(missileAmount > 0){
             System.out.println("The missile fired.");
         }
@@ -19,7 +19,7 @@ public class Military extends Air {
         }
     }
 
-    public static void catapulting(){
+    public void catapulting(){
         if(isCatapultPresent){
             System.out.println("Catapulting was successful.");
         } else {
