@@ -1,6 +1,6 @@
 package com.company;
 
-public class Transport {
+public abstract class Transport {
 
     int horsePower;
     int maxSpeed;
