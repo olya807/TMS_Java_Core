@@ -6,32 +6,32 @@ import java.util.Scanner;
 
 public class Computer {
 
-    static String processor = "Intel";
-    static String ram = "8 Gb";
-    static String hdd = "500 Gb";
-    static int resource = 2;
+    String processor = "Intel";
+    String ram = "8 Gb";
+    String hdd = "500 Gb";
+    int resource = 2;
 
     //the flag is 'false' by default
-    static boolean isBlewUp;
+    boolean isBlewUp;
 
     //the flag is 'false' by default
-    static boolean isPcTurnedOn;
+    boolean isPcTurnedOn;
 
     //count number of turn on/off cycles
-    static int runCycles = 1;
+    int runCycles = 1;
 
     //store user input from console
-    static int userChoice;
-    static String blewUpMessage = "\r\n\r\nSorry, you have run out of resource cycles. The PC has blew up.";
+    int userChoice;
+    String blewUpMessage = "\r\n\r\nSorry, you have run out of resource cycles. The PC has blew up.";
 
-    public static void pcDescription() {
+    public void pcDescription() {
 
         System.out.printf(
                 "PC characteristics are:\r\nProcessor - %s\r\nRAM - %s\r\nHDD - %s\r\nResource cycles - %s",
                 processor, ram, hdd, resource);
     }
 
-    public static void turnOnPc() {
+    public void turnOnPc() {
 
         if (runCycles > resource) {
             System.out.println(blewUpMessage);
@@ -50,7 +50,7 @@ public class Computer {
         }
     }
 
-    public static void turnOffPc() {
+    public void turnOffPc() {
 
         if (runCycles > resource) {
             System.out.println(blewUpMessage);
@@ -70,7 +70,7 @@ public class Computer {
         }
     }
 
-    private static void tryAndGuessNumber(String turnedOnOff, boolean isStateOn) {
+    private void tryAndGuessNumber(String turnedOnOff, boolean isStateOn) {
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
