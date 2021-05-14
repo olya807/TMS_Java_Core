@@ -7,7 +7,7 @@ public abstract class Transport {
     int weight;
     String model;
 
-    public int output(int horsePower){
+    public int output(){
         return (int) (horsePower * 0.74);
     }
 }

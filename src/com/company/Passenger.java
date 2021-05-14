@@ -8,7 +8,7 @@ public class Passenger extends Ground {
 
     public String characteristics() {
         return String.format("Body type is %s.\r\nPassengers amount is %s.\r\nOutput value is %s kW.",
-                bodyType, passengersAmount, output(horsePower));
+                bodyType, passengersAmount, output());
     }
 
     public void kilometersAmount(int time) {

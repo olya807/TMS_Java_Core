@@ -6,7 +6,7 @@ public class Cargo extends Ground {
 
     public String characteristics(){
         return String.format("Carrying capacity is %s.\r\nOutput value is %s kW.",
-                carryingCapacity, output(horsePower));
+                carryingCapacity, output());
     }
 
     public void checkCargoAmount(int cargoAmount){

@@ -7,7 +7,7 @@ public class Military extends Air {
 
     public String characteristics(){
         return String.format("Is catapult present: %s.\r\nMissile amount is %s.\r\nOutput value is %s kW.",
-                isCatapultPresent, missileAmount, output(horsePower));
+                isCatapultPresent, missileAmount, output());
     }
 
     public void shot(){
