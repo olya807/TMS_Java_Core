@@ -1,4 +1,4 @@
-package com.company;
+package by.teachmeskills.lesson3;
 
 import java.lang.reflect.Array;
 import java.util.*;

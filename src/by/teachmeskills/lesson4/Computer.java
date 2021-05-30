@@ -1,4 +1,4 @@
-package com.company;
+package by.teachmeskills.lesson4;
 
 import java.util.InputMismatchException;
 import java.util.Random;
