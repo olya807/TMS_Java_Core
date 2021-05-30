@@ -1,4 +1,4 @@
-package com.company;
+package by.teachmeskills.lesson2;
 
 import java.util.Scanner;
 

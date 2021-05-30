@@ -1,4 +1,4 @@
-package com.company;
+package by.teachmeskills.lesson5;
 
 public abstract class Transport {
 
